@@ -7,6 +7,5 @@ class ClockScreen extends StatefulWidget {
 
 class _ClockScreenState extends State<ClockScreen> {
   @override
-  Widget build(BuildContext context) {
-  }
+  Widget build(BuildContext context) {}
 }

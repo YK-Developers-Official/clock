@@ -119,7 +119,8 @@ class IntroState extends State<IntroScreen> {
         child: Padding(
           padding: const EdgeInsets.only(left: 75.0, right: 75.0, bottom: 10.0),
           child: RaisedButton(
-            shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+            shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(30.0)),
             color: Colors.white,
             child: new Text("Start"),
             onPressed: () {

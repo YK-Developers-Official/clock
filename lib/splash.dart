@@ -8,14 +8,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5),()=> Navigator.push(
-        context,
-        new MaterialPageRoute(builder: (context) => new IntroScreen())));
+    Timer(
+        Duration(seconds: 5),
+        () => Navigator.push(context,
+            new MaterialPageRoute(builder: (context) => new IntroScreen())));
   }
 
   @override
@@ -26,7 +26,8 @@ class _SplashScreenState extends State<SplashScreen> {
           fit: StackFit.expand,
           children: <Widget>[
             Container(
-              decoration: new BoxDecoration(color: Color.fromARGB(255, 26, 115, 233)),
+              decoration:
+                  new BoxDecoration(color: Color.fromARGB(255, 26, 115, 233)),
             ),
             Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -42,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
                             radius: 50.0,
                           ),
                           Padding(
-                            padding: EdgeInsets.only(top:10.0),
+                            padding: EdgeInsets.only(top: 10.0),
                           ),
                           new Text(
                             "Clock",
@@ -55,26 +56,24 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ),
                   ),
-                  Expanded(flex: 1,
+                  Expanded(
+                    flex: 1,
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           CircularProgressIndicator(),
-                          Padding(padding: EdgeInsets.only(top: 20.0),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20.0),
                           ),
                           new Text("A Clock",
                               style: new TextStyle(
                                   color: Colors.white,
                                   fontSize: 18.0,
-                                  fontWeight: FontWeight.bold)
-                          ),
-                        ]
-                    ),
+                                  fontWeight: FontWeight.bold)),
+                        ]),
                   ),
-                ]
-            ),
+                ]),
           ],
-        )
-    );
+        ));
   }
 }
